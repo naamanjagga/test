@@ -97,7 +97,9 @@ class IndexController extends Controller
         $user = new Teacher('teacher');
         $user->deleted($column, $value);
     }
-    public function updateTeacherAction()
+    public function createTeacherAction()
     {
+        $str = "null,hello,okay,subject";
+        $user = new Teacher($str);
     }
 }

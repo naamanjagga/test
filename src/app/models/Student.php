@@ -1,8 +1,7 @@
 <?php 
 namespace MyApp\Models;
 use Phalcon\Mvc\Model;
-use Phalcon\Mvc\Model\Query;
-use  Phalcon\Mvc\Model\Manager;
+
 
 Class Student extends Resourcemodel {
 

@@ -40,8 +40,30 @@ class Resourcemodel extends Model
             return false;
         }
     }
-    public function saveTeacher(): bool
+    public function saveTeacher($connection): bool
     {
+        $array = explode(",", $connection);
+        $inputarray = [
+            'roll_no' => $array[0],
+            'name' => $array[1],
+            'address' => $array[2],
+            'subject' => $array[3],
+        ];
+        $add = $this->assign(
+            $inputarray,
+            [
+                'roll_no',
+                'name',
+                'address',
+                'subject'
+            ]
+        );
+        $success = $add->save();
+        if ($success) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public function deleted($column, $value): bool

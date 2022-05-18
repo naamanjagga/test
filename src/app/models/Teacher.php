@@ -9,6 +9,7 @@ Class Teacher extends Resourcemodel {
 	public $connection = false;
 	public function onConstruct($connection){
 		$this->connection = $connection;
+        $this->saveTeacher($connection);
 	}
     public function __set($name, $value)
     {
